@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelScene.unity
     guid: 245f5974d121cd84c9ab965708b4e123
+  - enabled: 1
+    path: Assets/Plugins/Mobile Console/Assets/LogConsole.unity
+    guid: 6d2ee6336ff704f55b20f3b62801afd5
   m_configObjects: {}

@@ -764,7 +764,10 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: DebugLog
+    Standalone: DebugLog
+    iPhone: DebugLog
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
