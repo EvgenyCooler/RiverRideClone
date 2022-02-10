@@ -17,5 +17,8 @@ namespace Configs
         [SerializeField] private Vector3 jetMissleSpawnPoint;
         public Vector3 JetMissleSpawnPoint => jetMissleSpawnPoint;
 
+        [SerializeField] private float playerSpeed;
+        public float PlayerSpeed => playerSpeed;
+
     }
 }

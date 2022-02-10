@@ -35,12 +35,14 @@ namespace Presenters
         {
             Debug.Log("Player presenter initialize");
             playerView.OnFirePressed += OnFirePressedHandler;
+            playerView.OnMovePressed += OnMovePressedHandler;
             fireRateTimer = 0;
         }
         
         public void Dispose()
         {
             playerView.OnFirePressed -= OnFirePressedHandler;
+            playerView.OnMovePressed -= OnMovePressedHandler;
         }
 
         public void Tick()
@@ -63,6 +65,18 @@ namespace Presenters
             SpawnMissle();
             fireRateTimer = playerConfig.FireRate;
         }
+        
+        private void OnMovePressedHandler(Vector3 targetPosition)
+        {
+            targetPosition.y = 0;
+
+            var duration = Vector3.Distance(playerView.transform.position, targetPosition);
+
+            playerView.DOKill();
+            playerView.transform.DOMove(targetPosition, duration * playerConfig.PlayerSpeed).SetEase(Ease.Linear);
+            //playerView.transform.position = targetPosition;
+        }
+       
         #endregion
         
         #region Move
@@ -93,7 +107,7 @@ namespace Presenters
             missle.InUse = true;
             missle.name = "Missle";
             missle.gameObject.SetActive(true);
-            missle.transform.DOMove(new Vector3(0, 0, 70), 2f).SetEase(Ease.InSine).OnComplete(() =>
+            missle.transform.DOMove(new Vector3(playerView.transform.position.x, 0, 70), 2f).SetEase(Ease.InSine).OnComplete(() =>
             {
                 missle.InUse = false;
             });
