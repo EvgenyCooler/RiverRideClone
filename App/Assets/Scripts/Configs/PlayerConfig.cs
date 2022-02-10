@@ -20,5 +20,11 @@ namespace Configs
         [SerializeField] private float playerSpeed;
         public float PlayerSpeed => playerSpeed;
 
+        [SerializeField] private float inclineValue;
+        public float InclineValue => inclineValue;
+
+        [SerializeField] private float inclineTime;
+        public float InclineTime => inclineTime;
+
     }
 }

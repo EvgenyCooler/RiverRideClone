@@ -9,7 +9,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/PlayerConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/PlayerConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/PlayerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/PlayerConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenters/PlayerPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenters/PlayerPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/PlayerView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +76,7 @@
       <workItem from="1644434716519" duration="743000" />
       <workItem from="1644480382384" duration="2868000" />
       <workItem from="1644497021107" duration="12710000" />
+      <workItem from="1644521050935" duration="3856000" />
     </task>
     <servers />
   </component>
@@ -95,6 +96,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

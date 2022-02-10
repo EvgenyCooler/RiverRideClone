@@ -70,17 +70,40 @@ namespace Presenters
         {
             targetPosition.y = 0;
 
-            var duration = Vector3.Distance(playerView.transform.position, targetPosition);
+            var position = playerView.transform.position;
+            var duration = Vector3.Distance(position, targetPosition);
 
             playerView.DOKill();
-            playerView.transform.DOMove(targetPosition, duration * playerConfig.PlayerSpeed).SetEase(Ease.Linear);
-            //playerView.transform.position = targetPosition;
+            playerView.transform.DOMove(targetPosition, duration * playerConfig.PlayerSpeed)
+                .SetEase(Ease.Linear)
+                .OnComplete(() => playerView.transform.DORotate(Vector3.zero, playerConfig.InclineTime));
+            
+            MakePlayerIncline(position, targetPosition);
         }
        
         #endregion
         
         #region Move
-       
+
+        private void MakePlayerIncline(Vector3 startPosition, Vector3 targetPosition)
+        {
+            // Debug.Log("X " + Mathf.Abs(startPosition.x - targetPosition.x));
+            // Debug.Log("Z " + Mathf.Abs(startPosition.z - targetPosition.z));
+
+            var inclineZ = 0f;
+            if (Mathf.Abs(startPosition.x - targetPosition.x) > 5)
+                inclineZ = (startPosition.x > targetPosition.x ? -1 : 1) * playerConfig.InclineValue;
+
+            var inclineX = 0f;
+            if(Mathf.Abs(startPosition.z - targetPosition.z) > 5)
+                inclineX = (startPosition.z > targetPosition.z ? -1 : 1) * playerConfig.InclineValue;
+            
+            playerView.transform.DORotate(new Vector3(
+                inclineX,
+                0, 
+                -inclineZ
+                ), playerConfig.InclineTime);
+        } 
 
         #endregion
 

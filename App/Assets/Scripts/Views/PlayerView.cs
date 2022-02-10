@@ -17,10 +17,10 @@ namespace Views {
         .Subscribe (x =>
         { 
           Vector3 mousePos = Input.mousePosition;
-          Debug.Log("A." + mousePos);
+          //Debug.Log("A." + mousePos);
 
           mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-          Debug.Log("B." + mousePos);
+          //Debug.Log("B." + mousePos);
 
           OnMovePressed?.Invoke(mousePos);
         })
