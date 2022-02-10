@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4103677209411507867}
   - component: {fileID: 5075648605345128157}
+  - component: {fileID: 612771486}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -45,6 +46,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e32b2844784664ea76a76174177423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &612771486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4103677209411507866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.2, y: 3.6, z: 11}
+  m_Center: {x: 0, y: 1.76, z: 0}
 --- !u!1001 &4103677210915324369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52,6 +66,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4103677209411507867}
     m_Modifications:
+    - target: {fileID: 5777340929426524644, guid: 32c528b21d120a1478d5f3009e3a0633,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777490304044426154, guid: 32c528b21d120a1478d5f3009e3a0633,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777930965037190658, guid: 32c528b21d120a1478d5f3009e3a0633,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5820036250548990016, guid: 32c528b21d120a1478d5f3009e3a0633,
         type: 3}
       propertyPath: m_RootOrder
@@ -70,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 5820036250548990016, guid: 32c528b21d120a1478d5f3009e3a0633,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5820036250548990016, guid: 32c528b21d120a1478d5f3009e3a0633,
         type: 3}

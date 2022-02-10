@@ -15,7 +15,7 @@ MonoBehaviour:
   fireRate: 0.3
   jetMisslePrefab: {fileID: 8417134784331603320, guid: 31c2f1e8a2f2249498fdf4357fbdae23,
     type: 3}
-  jetMissleSpawnPoint: {x: 0, y: 0, z: 8}
+  jetMissleSpawnPoint: {x: 0, y: -5, z: 8}
   playerSpeed: 0.05
   inclineValue: 15
   inclineTime: 0.3

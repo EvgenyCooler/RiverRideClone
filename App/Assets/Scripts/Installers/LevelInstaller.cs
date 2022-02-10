@@ -24,7 +24,6 @@ namespace Installers
             // Views & Presenters
             Container.Bind<PlayerView>().FromInstance(playerView).AsSingle();
             Container.BindInterfacesAndSelfTo<PlayerPresenter>().AsSingle().NonLazy();
-            Container.Bind<MainStartFromLevel>().AsSingle();
             
             //Signals
             Container.DeclareSignal<FirePressedSignal>();

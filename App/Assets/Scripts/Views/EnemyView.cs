@@ -1,18 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
-public class EnemyView : MonoBehaviour
+namespace Views
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyView : MonoBehaviour
     {
+        [SerializeField] private GameObject model;
+        [SerializeField] private GameObject prefabDestroyed;
+        [SerializeField] private GameObject particlesDestroyed;
         
-    }
+        private void Start()
+        {
+            this.OnTriggerEnterAsObservable()
+                .Subscribe(x =>
+                    {
+                        Debug.Log("Collider name" + x.name);
+                        StartCoroutine(DestroyEnemy());
+                    })
+                .AddTo(this);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private IEnumerator DestroyEnemy()
+        {
+            particlesDestroyed.gameObject.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            prefabDestroyed.SetActive(true);
+            model.SetActive(false);
+        }
     }
 }

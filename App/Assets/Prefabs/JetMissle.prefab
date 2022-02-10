@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 768198201757213865}
   - component: {fileID: 728777444988733159}
   - component: {fileID: 8417134784331603320}
+  - component: {fileID: 179685491569424002}
   m_Layer: 0
   m_Name: JetMissle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &790213317378664635
 Transform:
   m_ObjectHideFlags: 0
@@ -94,7 +95,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792231588271471043}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -112,6 +113,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f45dce7142b814a84ace9a7c96f637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &179685491569424002
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792231588271471043}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &913246692991626902
 PrefabInstance:
   m_ObjectHideFlags: 0
