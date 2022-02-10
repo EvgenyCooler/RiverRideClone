@@ -8,7 +8,7 @@ public class Main : MonoBehaviour
     [SerializeField] private string levelSceneName = "LevelScene";
     void Start()
     {
-        SceneManager.LoadSceneAsync(levelSceneName, LoadSceneMode.Single);        
+        SceneManager.LoadSceneAsync(levelSceneName, LoadSceneMode.Single);
     }
 
 }
